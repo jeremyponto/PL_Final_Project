@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller4">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2">
+         <children>
+            <Label text="Receipt" />
+         </children>
+      </HBox>
+      <Label fx:id="lblProduct" GridPane.rowIndex="1" />
+      <Label fx:id="lblProduct2" GridPane.rowIndex="2" />
+      <Label fx:id="lblProduct3" GridPane.rowIndex="3" />
+      <Label fx:id="lblProduct4" GridPane.rowIndex="4" />
+      <Label fx:id="lblProduct5" GridPane.rowIndex="5" />
+      <Label fx:id="lblProduct6" GridPane.rowIndex="6" />
+      <Label text="Subtotal" GridPane.rowIndex="8" />
+      <Label text="Tax (10%)" GridPane.rowIndex="9" />
+      <Label text="Total" GridPane.rowIndex="11" />
+      <Label text="Money" GridPane.rowIndex="12" />
+      <Label text="Change" GridPane.rowIndex="14" />
+      <Label fx:id="lblProductPrice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label fx:id="lblProductPrice2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label fx:id="lblProductPrice3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label fx:id="lblProductPrice4" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Label fx:id="lblProductPrice5" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label fx:id="lblProductPrice6" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Label fx:id="lblSubtotal" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Label fx:id="lblTax" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      <Label fx:id="lblTotal" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+      <Label fx:id="lblMoney" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+      <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+      <Label fx:id="lblChange" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+      <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="15">
+         <children>
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#back" text="Back" />
+         </children>
+      </HBox>
+   </children>
+</GridPane>

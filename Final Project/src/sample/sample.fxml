@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="btnCalculateTotal" mnemonicParsing="false" onAction="#calculateTotal" text="Calculate Total">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnCalculateChange" mnemonicParsing="false" onAction="#calculateChange" text="Calculate Change" visible="false">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" top="5.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnPrintReceipt" mnemonicParsing="false" onAction="#printReceipt" text="Print Receipt" visible="false">
+               <VBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+         <children>
+            <Label fx:id="lblSubtotal" text="Subtotal: Rp0">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="10.0" />
+               </VBox.margin></Label>
+            <Label fx:id="lblTax" text="Tax (10%): Rp0">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin></Label>
+            <Label fx:id="lblTotal" text="Total: Rp0">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="300.0">
+               <children>
+                  <Label text="Money: " />
+                  <TextField fx:id="tfMoney" disable="true" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin></HBox>
+            <Label fx:id="lblChange" text="Change: Rp0">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+         </children></VBox>
+      <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+         <children>
+            <Label fx:id="lblUsername">
+               <VBox.margin>
+                  <Insets bottom="5.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnSignOut" mnemonicParsing="false" onAction="#signOut" text="Sign Out">
+               <VBox.margin>
+                  <Insets right="10.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <ImageView fx:id="ivProduct" fitHeight="90.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lblProduct" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="300.0">
+               <children>
+                  <Label text="Qty: " />
+                  <Spinner fx:id="spProduct" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <ImageView fx:id="ivProduct2" fitHeight="90.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lblProduct2" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="300.0">
+               <children>
+                  <Label text="Qty: " />
+                  <Spinner fx:id="spProduct2" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <ImageView fx:id="ivProduct3" fitHeight="90.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lblProduct3" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="300.0">
+               <children>
+                  <Label text="Qty: " />
+                  <Spinner fx:id="spProduct3" />
+               </children>
+            </HBox>
+         </children></VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+         <children>
+            <ImageView fx:id="ivProduct4" fitHeight="90.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lblProduct4" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="300.0">
+               <children>
+                  <Label text="Qty: " />
+                  <Spinner fx:id="spProduct4" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="411.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <ImageView fx:id="ivProduct5" fitHeight="90.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lblProduct5" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="300.0">
+               <children>
+                  <Label text="Qty: " />
+                  <Spinner fx:id="spProduct5" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="310.0" layoutY="411.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <ImageView fx:id="ivProduct6" fitHeight="90.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="lblProduct6" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="300.0">
+               <children>
+                  <Label text="Qty: " />
+                  <Spinner fx:id="spProduct6" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
